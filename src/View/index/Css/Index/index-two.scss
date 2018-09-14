@@ -1,0 +1,76 @@
+
+$color:#666;
+body{
+    font-family: Microsoft YaHei;
+    font-size: 13px;
+}
+
+.header{
+    width:1519px;
+    height: 100px;
+    background-color: #fc7a00;
+    .head{
+        width: 1200px;
+        height:100px;
+        margin: 0 auto;
+    }
+}
+
+.right{
+    width:30px;
+    height:100%;
+    background-color:#333;
+    position:fixed;
+    right: 0px;
+    top:0
+}
+.box{
+    width:1519px;
+    height:36px;
+    .container{
+        width:1200px;
+        height: 36px;       
+        margin: 0 auto;
+        .s1,h3 a{
+            color:$color;
+          
+        }
+        h3{
+            display: inline;
+        }
+        .a1{
+            line-height: 36px;
+            color:#ff6600;           
+            padding: 8px 5px;
+            
+        }
+        .conright{
+            float:right;
+            a{
+                
+                font-size: 13px;
+                padding: 12px 20px 8px;
+                line-height: 36px;
+            }
+        }
+    }
+}
+.bg-fff{
+    height: 160px;
+    width:1519px;
+    .head2{
+        width:1200px;
+        height: 160px;
+        margin: 0 auto;
+        .logo,.logo-ad{padding-top:20px}
+        .logo{
+            float:left;
+            width:220px;
+        }
+        .logo-ad{
+            float:left;
+        }
+        
+    }
+    
+}
