@@ -6,4 +6,4 @@
 require('./modules/banner')
 require('./modules/header')
 
-console.log('index213')
+console.log('index')
