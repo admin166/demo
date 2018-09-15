@@ -104,12 +104,12 @@ gulp.task('inject', function () {
         config.pages.forEach(page => {
             var target = gulp.src('./dist/'+page+'/'+page+'.html');
             // It's not necessary to read the files (will speed up things), we're only after their paths:
-            var sources = gulp.src(['./dist/'+page+'/js/*.js', './dist/'+page+'/Css/*.css'], {read: false});
+            var sources = gulp.src(['./dist/'+page+'/js/*.js', './dist/'+page+'/css/*.css'], {read: false});
            
             target.pipe(inject(sources, { ignorePath: '/dist' }))
               .pipe(gulp.dest('./dist/'+page+''));
         })
-    }, 2000);  
+    }, 1000);  
 });
 
 gulp.task('dist',function(){
@@ -133,4 +133,4 @@ gulp.task("reload", function(){
 		.pipe(connect.reload());
 })
 
-gulp.task('default',['server','dist','handle:css','inject','handle:js','watch'])
+gulp.task('default',['server','dist','handle:css','handle:js','inject','watch'])
