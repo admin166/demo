@@ -309,31 +309,43 @@ body{
    
 }
 .center{
-    background: #fc7a00;
+   
     position: relative;
     width:1490px;
     height:517px;
     .u{
        position: absolute;
-               
-        left:369px;
+         width:1490px;       
+        
         height: 517px;
-        li{
+        li{          
+            background: rgb(254, 134, 22);
+            width:1490px;
+            height:517px;
             position: absolute;
             display: none;
+            .sitewidth{
+                width: 1174px;
+                height: 518px;
+                margin: 0 auto;
+            }
         }
         li img{
+            margin: 0 auto;
             width:775px;
             height: 517px;
         }
     }
     .cenright{
+        position: relative;
+        z-index: 99;
         background: #fff;
         width:220px;
         height: 208px;
         border:1px solid red;
         float: right;
-        margin-right: 127px;
+        margin-right: 135px;
+        top:-35px;
         .hd{
            
              height: 38px;
