@@ -14,6 +14,7 @@ const config = {
         port: 8000,
         livereload: true
     },
+    pages: [ 'index', 'order', 'shop' ],
     cssoptions: {// css配置
         'index': { // index页面的css
             'common': [ // index页面处理之后的common.min.css需要合并的文件
@@ -32,12 +33,12 @@ const config = {
     },
     jsoptions: {// js配置
         'index': { //首页的入口
-            index: './src/View/index/javascripts/index.js',
-            vendor: './src/View/index/javascripts/vendor.js'
+            index: './src/view/index/javascripts/index.js',
+            vendor: './src/view/index/javascripts/vendor.js'
         },
-        'order': './src/View/order/javascripts/list.js'
+        'order': './src/view/order/javascripts/list.js'
     },
-     pages: [ 'index', 'order', 'shop' ],
+    
     
 }
 module.exports = config

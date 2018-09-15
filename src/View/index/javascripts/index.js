@@ -6,4 +6,11 @@
 require('./modules/banner')
 require('./modules/header')
 
-console.log('index')
+var ul = $(".center ul li");
+
+var index = 0;
+function move(){
+    index++;
+    ul.eq(index).show()
+}
+setInterval(move,1000)

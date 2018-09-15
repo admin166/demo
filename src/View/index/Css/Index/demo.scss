@@ -223,6 +223,7 @@ body{
               }
             }
             ul{
+                z-index: 999;
                 width:210px;
                 height: 517px;
                 position: absolute;
@@ -258,12 +259,13 @@ body{
 .nav-index{
     width:728px;
     height: 40px;
+    position: absolute;
+    left: 370px;
+    margin-top: -40px;
     .nav-fix {
         width:728px;
         height: 40px;
-        position: absolute;
-        left:370px;
-        margin-top: -40px;
+       
         ul li{
             margin-left: 50px;
             float:left;
@@ -274,5 +276,92 @@ body{
                 color:black;     
             }
         }
+    }
+}
+.nav-right{
+    width: 220px;
+    position: absolute;
+    left: 1152px;
+    margin-top: -38px;
+    .m_wnews,.minbox{
+        overflow: hidden;
+        width:196px;
+        height: 38px;
+        position: relative;
+    }
+    
+    .minright{
+        width:24px;
+        height: 12px;
+        position: absolute;
+        left: 202px;
+         top: 7px;
+    }
+    .minright a{
+        width: 12px;
+        height: 12px;
+        display: block;
+        overflow: hidden;
+        line-height: 0;
+        text-indent: -999em;
+        background: url(https://static.ingping.com/yp/images/index_newadd-1.0.0.png) no-repeat -12px 0;
+    }
+   
+}
+.center{
+    background: #fc7a00;
+    position: relative;
+    width:1490px;
+    height:517px;
+    .u{
+       position: absolute;
+               
+        left:369px;
+        height: 517px;
+        li{
+            position: absolute;
+            display: none;
+        }
+        li img{
+            width:775px;
+            height: 517px;
+        }
+    }
+    .cenright{
+        background: #fff;
+        width:220px;
+        height: 208px;
+        border:1px solid red;
+        float: right;
+        margin-right: 127px;
+        .hd{
+           
+             height: 38px;
+             line-height: 38px;
+             padding: 0 10px 0 10px;
+             border-bottom: 1px solid #e8e8e8;
+             position: relative;
+           ul li{
+               float: left;
+               height: 38px;
+              
+               border-bottom: 3px solid #ff6600;
+               margin: 0px 10px;
+               cursor: pointer;
+               font-size: 13px;
+           }  
+        }
+        .bd ul{display: none; padding: 10px 15px;}
+        .bd ul li{                    
+            width: 220px;            
+            height: 25px;
+            font-size: 12px;
+            line-height: 25px;
+            overflow: hidden;
+            a{
+                color:#333;
+            }
+        }
+
     }
 }
