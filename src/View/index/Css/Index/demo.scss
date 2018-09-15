@@ -288,6 +288,10 @@ body{
         width:196px;
         height: 38px;
         position: relative;
+        .m_box{
+            height: 190px;
+            position: relative;
+        }
     }
     
     .minright{
@@ -355,16 +359,14 @@ body{
              position: relative;
            ul li{
                float: left;
-               height: 38px;
-              
-               
+               height: 38px;                           
                margin: 0px 10px;
                cursor: pointer;
                font-size: 13px;
            }  
         }
-        .bd ul{display: none; padding: 10px 15px;}
-        .bd ul li{                    
+        .bd ul{ padding: 10px 15px;}
+        .bd .a li{                            
             width: 220px;            
             height: 25px;
             font-size: 12px;
@@ -374,7 +376,12 @@ body{
                 color:#333;
             }
         }
-
+        .bd .b{width:220px;padding: 0;height: 241px;background: #fff;}
+        .bd .b li{float:left;width:72px;height: 79px;border-color: #e8e8e8;border-width: 0px 1px 1px 0px;border-style:solid;
+             i{font-size: 33px;margin-left: 20px;line-height: 80px;color:#000;}
+        
+        }
+            
     }
 }
 .on{
