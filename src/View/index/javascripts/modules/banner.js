@@ -23,7 +23,7 @@ function on(){
     }
     list.eq(count).addClass("on").siblings().removeClass("on");
 }
-var timer2 = setInterval(on,2000);
+//var timer2 = setInterval(on,2000);
 
 var dis = $(".m_wnews .m_box");
 var a = 0;
@@ -41,4 +41,4 @@ dis.animate({"top":-38*a},2000,function(){
        
    
 }
-var timer3 = setInterval(top,1500)
+//var timer3 = setInterval(top,1500)
