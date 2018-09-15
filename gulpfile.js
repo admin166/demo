@@ -45,30 +45,30 @@ gulp.task('handle:css', function () {
     // var a = { x: 1, y: 2 } var b = { z: 3, ...a } // b: { x: 1, y: 2, z: 3 }
 })
 gulp.task('handle:js', function () {
-//     return gulp.src('src/entry.js')//这里瞎写一个就行
-//         //真正的处理都是在这里的
-//         .pipe(webpack({
-//             mode: 'production', // 设置打包模式： none development production(会压缩代码)
-//             //单入口 单出口
-//             // entry: './src/views/index/javascripts/index.js',// 入口
-//             // output: {
-//             //     filename: 'index.js'
-//             // }
-//             //多入口 单出口 数组中，谁在前面，打包的时候也在前面
-//             // entry: ['./src/views/index/javascripts/index.js','./src/views/index/javascripts/vendor.js'],// 入口
-//             // output: {
-//             //     filename: 'index.js'
-//             // }
-//             // 多入口 多出口
-//             entry: {
-//                 index: './src/View/index/javascripts/index.js',
-//                 vendor: './src/View/index/javascripts/vendor.js'
-//             }, // 入口
-//             output: {
-//                 filename: '[name].min.js' // [name]代表在entry中键名是什么，打包出来的就是什么
-//             }
-//         }))
-//         .pipe(gulp.dest('./dist/index/js'))
+    // return gulp.src('src/entry.js')//这里瞎写一个就行
+    //     //真正的处理都是在这里的
+    //     .pipe(webpack({
+    //         mode: 'production', // 设置打包模式： none development production(会压缩代码)
+    //         //单入口 单出口
+    //         // entry: './src/views/index/javascripts/index.js',// 入口
+    //         // output: {
+    //         //     filename: 'index.js'
+    //         // }
+    //         //多入口 单出口 数组中，谁在前面，打包的时候也在前面
+    //         // entry: ['./src/views/index/javascripts/index.js','./src/views/index/javascripts/vendor.js'],// 入口
+    //         // output: {
+    //         //     filename: 'index.js'
+    //         // }
+    //         // 多入口 多出口
+    //         entry: {
+    //             index: './src/views/index/javascripts/index.js',
+    //             vendor: './src/views/index/javascripts/vendor.js'
+    //         }, // 入口
+    //         output: {
+    //             filename: '[name].min.js' // [name]代表在entry中键名是什么，打包出来的就是什么
+    //         }
+    //     }))
+    //     .pipe(gulp.dest('./dist/index/js'))
 
     let streams = []
     for (const page in config.jsoptions) {

@@ -319,7 +319,7 @@ body{
         
         height: 517px;
         li{          
-            background: rgb(254, 134, 22);
+            
             width:1490px;
             height:517px;
             position: absolute;
@@ -357,7 +357,7 @@ body{
                float: left;
                height: 38px;
               
-               border-bottom: 3px solid #ff6600;
+               
                margin: 0px 10px;
                cursor: pointer;
                font-size: 13px;
@@ -376,4 +376,7 @@ body{
         }
 
     }
+}
+.on{
+    border-bottom: 3px solid #ff6600;
 }
