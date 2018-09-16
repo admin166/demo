@@ -39,6 +39,19 @@ list.hover(function(){
     $(this).find("a").removeClass("active");
 })
 
+
+$(".hover  a").hover(function(){
+    $(".hover .dist").show().animate({"left":-90},1000)
+},function(){
+    $(".hover .dist").hide().css("left",-121)
+})
+
+$(".hover2  a").hover(function(){
+    $(".hover2 .dist").show().animate({"left":-90},1000)
+},function(){
+    $(".hover2 .dist").hide().css("left",-121)
+})
+
 //滚轮
 $(window).scroll(function(){
  var h = document.documentElement.scrollTop || document.body.scrollTop;
@@ -52,9 +65,24 @@ $(window).scroll(function(){
 
 //我的信息
 $(".user").hover(function(){
+    $(this).addClass("active2")
+    $(this).find("i").css("color","#fff")
     $(".r-top-h").show();
 },function(){
+    $(this).removeClass("active2")
+    $(this).find("i").css("color","#ff6600")
     $(".r-top-h").hide();
 })
+$(".kf").hover(function(){
+    $(this).addClass("active2")
+    $(this).find("i").css("color","#fff")
+    $(".kf-index").show(); 
+},function(){
+    $(this).removeClass("active2")
+    $(this).find("i").css("color","#ff6600")
+    $(".kf-index").hide();  
+})
+
+
 
 
