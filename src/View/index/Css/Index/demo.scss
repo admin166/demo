@@ -4,9 +4,8 @@ body{
     font-family: Microsoft YaHei;
     font-size: 13px;
 }
-body,html{
-    width:100%;
-    height: 100%;
+html,body{
+    height:100%;
 }
 .header{
     width:1519px;
@@ -19,16 +18,18 @@ body,html{
        
     }
 }
+.fixed{position: fixed;height:100%;width:315px;right:0px;top:0;z-index:999}
 .allbox{
     z-index:999;
     width: 330px;
     position: absolute;
-    right: 0px;
+    right: -300px;
     top: 0;
     height: 100%;
-    transition: all 0.3s ease-in-out;
+   
 }
  .box2{
+    
     width: 30px;
     height: 100%;
     background: #333;
@@ -198,11 +199,11 @@ body,html{
     }
     #shopcart{
         display: block;
-        margin-top:10px;
+        padding-top:10px;
         border-bottom: 1px solid #ccc;
         padding-bottom: 12px;
         a{
-            color:#fc7a00;
+            
             width: 30px;
             font-size: 12px;
             position: relative;
@@ -211,6 +212,7 @@ body,html{
             display: block;height:150px;
         }
         span{
+            color:#fff;
             width: 16px;
             display: block;
             height: 48px;
@@ -226,6 +228,8 @@ body,html{
     }
 }
 .quick_links{
+   
+    display: none;
     z-index:999;
     width: 300px;
     height: 100%;
@@ -236,9 +240,24 @@ body,html{
     top: 0;
     bottom: 0;
     .header2{
-        img{
+        position: fixed;
+        padding: 12px;
+        height:45px;
+        width:280px;
+        border:1px solid #e1e1e1;
+       
+        top:0;
+        .f3{float:left;
+            width:70px;
+          span{margin-top:-17px;float:right;}
+        }
+        .img{
             float:right;
             cursor: pointer
+        }
+        .img:hover{
+            transform: rotate(180deg);
+            transition: 1s linear;
         }
     }
 }
@@ -274,7 +293,8 @@ body,html{
                    margin-left: 15px;
                }
               ul{
-                  top:35px;
+                  z-index:99;
+                  top:136px;
                   width:122px;
                   position: absolute;
                   border: 1px solid #eaeaea;
@@ -683,6 +703,7 @@ body,html{
         top:-35px;
         .hd{
            
+           
              height: 38px;
              line-height: 38px;
              padding: 0 10px 0 10px;
@@ -811,9 +832,10 @@ body,html{
     width:40px;
     position: fixed;
     left:7%;
-    top:30%;
+    top:15%;
     display: none;
     p{
+        cursor: pointer;
         background:#ff6600; 
         height: 40px;
         color:#fff;
