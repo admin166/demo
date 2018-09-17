@@ -53,14 +53,40 @@ $(".hover2  a").hover(function(){
 })
 
 //滚轮
+
+var divs = $(".boxs");
+
 $(window).scroll(function(){
- var h = document.documentElement.scrollTop || document.body.scrollTop;
- console.log(h)
- if( h > 350 ){
-     $(".footer").show()
+ var h = $("body,html").scrollTop();
+ if( h > 50 ){
+     $(".l2").show()
  }else{
-    $(".footer").hide()
+    $(".l2").hide()
+ }   
+ var index = divs.filter(function(){
+    return  Math.abs($(this).offset().top - h) < $(this).height()/2;
+   
+ })
+ //console.log(index.index())
+ if( h > 1270 ){
+    if( index.index() != -1 ){
+        $(".footer li").eq(index.index()).find("a").addClass("active2").end().siblings().find("a").removeClass("active2");
+     }
  }
+ 
+ 
+ if( h > 350 ){
+     $(".footer").show().css("opacity",0.5).stop().animate({"opacity":1},300);
+ }else{
+    $(".footer").hide().stop().animate({"opacity":0.5},600);
+ }
+
+ $(".footer li").click(function(){
+    
+     var stop = divs.eq($(this).index()-1).offset().top
+    console.log(stop)
+     $("body,html").stop().animate({"scrollTop":stop},1000)
+ })
 });
 
 //我的信息
@@ -113,10 +139,49 @@ $(".footer li").hover(function(){
 },function(){
     $(this).find("a").removeClass("active2");
 })
-
+$(".l1").hover(function(){
+    
+    $(".mp_qrcode").show()
+},function(){
+    $(".mp_qrcode").hide();
+})
 
 //滚回顶部
-$(".top").click(function(){
-    alert()
-    $("html,body").animate({"scrollTop":0},1000);
+$(".top").click(function(){  
+    $("html,body").stop().animate({"scrollTop":0},1000);
 })
+
+$(".l2").click(function(){
+   
+    $("html,body").stop().animate({"scrollTop":0},1000);
+})
+//图片抖动
+$("#like-indexs li").hover(function(){
+    $(this).find("img").css("position","relative").animate({"left":-5},300);
+    $(this).find("p").css("color","#ff6600");
+},function(){
+    $(this).find("img").animate({"left":0},300);
+    $(this).find("p").css("color","#333");
+})
+
+//
+$(".left_f2 img").hover(function(){
+   var b = parseInt($(this).css("right"));
+  
+    $(this).animate({"right":b+5},300)
+},function(){
+    var b = parseInt($(this).css("right"));
+    $(this).animate({"right":b-5},300)
+})
+//
+
+$(".rightbox img ").hover(function(){
+    
+    var b = parseInt($(this).css("right"));
+   
+     $(this).animate({"right":b+5},300)
+ },function(){
+    $(this).css("z-index",1)
+     var b = parseInt($(this).css("right"));
+     $(this).animate({"right":b-5},300)
+ })

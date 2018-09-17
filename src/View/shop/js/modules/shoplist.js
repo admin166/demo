@@ -1,0 +1,1 @@
+$("#headwrap").load("../../public/public.html");

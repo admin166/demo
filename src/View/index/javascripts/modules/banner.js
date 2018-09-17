@@ -1,4 +1,4 @@
-
+$("#headwrap").load("../../public/public.html")
 console.log('banner');
 var ul = $(".center .u li");
 //轮播图
@@ -15,6 +15,7 @@ function move(){
 var timer = setInterval(move,1000);
 
 var list = $(".hd ul li");
+var olist = $(".bd ul");
 var count = 0;
 function on(){
     count++;
@@ -22,8 +23,20 @@ function on(){
         count = 0;
     }
     list.eq(count).addClass("on").siblings().removeClass("on");
+    olist.eq(count).show().siblings().hide();
 }
 var timer2 = setInterval(on,2000);
+list.hover(function(){
+    clearInterval(timer2);
+    count = $(this).index() - 1;
+    on();
+},function(){
+    timer = setInterval(on,2000);
+})
+
+
+
+
 
 var dis = $(".m_wnews .m_box");
 var a = 0;

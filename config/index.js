@@ -14,7 +14,7 @@ const config = {
         port: 8000,
         livereload: true
     },
-    pages: [ 'index', 'order', 'shop' ],
+    pages: [ 'index', 'order', 'shop' ,'public' ],
     cssoptions: {// css配置
         'index': { // index页面的css
             'common': [ // index页面处理之后的common.min.css需要合并的文件
@@ -29,6 +29,13 @@ const config = {
                 './src/Css/resert.scss',
                 './src/View/order/*/*.scss'
             ]
+        },
+        'shop': {
+            'common': [
+                './src/Css/resert.scss',
+                './src/View/shop/*/*.scss'
+            ],
+            'shop': './src/View/shop/Css/shop/*.scss'
         }
     },
     jsoptions: {// js配置
@@ -36,7 +43,11 @@ const config = {
             index: './src/view/index/javascripts/index.js',
             vendor: './src/view/index/javascripts/vendor.js'
         },
-        'order': './src/view/order/javascripts/list.js'
+        'order': './src/view/order/javascripts/list.js',
+        'shop':{ //首页的入口
+            shop: './src/view/shop/js/shop.js',
+           
+        },
     },
     
     
