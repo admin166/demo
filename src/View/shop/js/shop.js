@@ -1,2 +1,3 @@
 require('./modules/shoplist');
-require('../../index/javascripts/modules/header')
+
+require('./modules/big');

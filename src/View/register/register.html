@@ -11,12 +11,78 @@
 <body>
     <div class="g-doc">
         <div class="login-header">
-            <div class="container">
-                <div class="login-logo">
-                    <img src="./img/1.png" alt="">
+          
+            <div id="head"></div>
+            <div class="layout-a">
+                    <div class="n-frame device-frame reg_frame" id="main_container">
+                        <div class="sign-bg">
+                            <a href="#" style="background:#0094e2;"></a>
+                        </div>
+                        <h1 class="nl-sign-title">
+                            <span>一个账号，玩转所有音平服务</span>
+                        </h1>
+        
+                        <div class="regbox">
+                            <div class="panel-title">注册账号</div>
+                            <div class="slideTxtBox">
+                                <div class="bd">
+                                    <!-- 手机注册 -->
+                                    <ul>
+                                        <li>
+                                            <form id="phoneFormReg" method="post" onsubmit="return false;">
+                                                <input type="hidden" name="uuid" >
+                                                <input type="hidden" >
+                                                <input type="hidden" name="weixin_openid" value="">
+                                                <input type="hidden" name="weixin_unionid" value="">
+                                                <input type="hidden" name="fxPid" value="">
+        
+                                                <div class="shake-area" style="z-index:30;">
+                                                    
+        
+                                                    
+                                                    <div id="phoneNumErrorDiv" class="err_tip" style="display: none;">
+                                                        <div class="dis_box"><em class="icon_error"></em><span id="phoneNumError"></span></div>
+                                                    </div>
+        
+                                                    <div class="enter-area">
+                                                       
+                                                        <input type="text" class="enter-item" id="authCode" name="user" autocomplete="off" placeholder="账号">
+                                                    </div>
+                                                    <div class="err_tip1" >
+                                                        <div class="dis_box"><em class="icon_error"></em><span id="authCodeError">账号格式错误</span></div>
+                                                    </div>
+        
+                                                    <div class="enter-area" style="z-index:20;">
+                                                        
+                                                        <input type="password" class="enter-item" id="phonePassword" name="password" autocomplete="off" placeholder="请设置6-20位登录密码" >
+                                                    </div>
+                                                    <div class="err_tip"  id="phonePasswordErrorDiv">
+                                                        <div class="dis_box"><em class="icon_error"></em><span id="phonePasswordError">密码格式错误</span></div>
+                                                    </div>
+                                                    <div style="width:200px" class="enter-area">
+                                                       
+                                                            <input type="text" class="enter-item" id="authCode" name="yzm" autocomplete="off" placeholder="请输入验证码">
+                                                            
+                                                     </div>
+                                                     <div ov id="canvas" width="50" height="43"></div><a  id="change"  href="javascripts:;">看不清，换一张</a>
+        
+                                                    <input id="submit" class="button orange" type="button" value="立即注册">
+                                                    
+                                                </div>
+                                            </form>
+                                        </li>
+                                    </ul>
+                                    <!-- / 手机注册 -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="f-blank20"></div>
                 </div>
-            </div>
         </div>
     </div>
+<script src="https://cdn.bootcss.com/jquery/3.1.0/jquery.js"></script>   
+<script src="https://cdn.bootcss.com/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+<script src="./js/register.min.js"></script>
 </body>
 </html>

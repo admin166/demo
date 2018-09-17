@@ -7,6 +7,166 @@
         .login-logo{
             width:200px;
             float:left;
+            
         }
+        .login-items{
+            margin-top:45px;
+            float:right;
+            li{
+                float:left;
+                margin-left:20px;
+            }
+        }
+    }
+    .n-frame {
+        padding: 30px 0px 0;
+        min-height: 400px;
+        _height: 400px;
+        position: relative;
+        .sign-bg {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+             a {
+                background: #0094e2;
+                display: inline-block;
+                width: 100%;
+                height: 100%;
+                background-size: cover;
+                background-position: center center;
+                background-repeat: no-repeat;
+            }
+        }
+        .nl-sign-title {
+            text-align: center;
+            color: #fff;
+            font-size: 20px;
+            margin-top: 10px;
+            position: inherit;
+        }
+        .regbox {
+
+            width: 310px;
+            line-height: 20px;
+            background: #fff;
+            padding: 10px 20px;
+            position: absolute;
+            margin: auto;
+            margin-top: 90px;
+            top: 0;
+            left: 0;
+            right: 0;
+            .panel-title {
+                height: 45px;
+                font-size: 18px;
+                line-height: 45px;
+                color: #666666;
+            }
+        }
+        .shake-area, .code-enter-item {
+            margin-bottom: 16px;
+
+        }
+        .shake-area {
+            position: relative;
+            z-index: 30;
+            .enter-area {
+                
+                position: relative;
+                margin-bottom: 15px;
+                background: #fff;
+                border: 1px solid #e6e6e6!important;
+                .revalidate-user-name {
+                    font-size: 16px;
+                    height: 20px;
+                    line-height: 20px;
+                    font-weight: bold;
+                    padding: 16px 0;
+                    text-align: center;
+                }
+                .enter-item {
+                    background: #fff;
+                    width: 92%;
+                    /* display: block; */
+                    line-height: 20px;
+                    padding: 12px 10px;
+                    border: 0;
+                    color: #333;
+                    font-size: 14px;
+                    font-weight: bold;
+                    -webkit-appearance: none;
+                    -moz-appearance: none;
+                    appearance: none;
+                }
+                .enter-item {
+                    background: #fff;
+                    width: 92%;
+                    /* display: block; */
+                    line-height: 20px;
+                    padding: 12px 10px;
+                    border: 0;
+                    color: #333;
+                    font-size: 14px;
+                    font-weight: bold;
+                    -webkit-appearance: none;
+                    -moz-appearance: none;
+                    appearance: none;
+                }
+               
+            }
+            .remain {
+                margin-left: 8px;
+                vertical-align: middle;
+                background: #fff;
+                display: inline-block;
+                height: 44px;
+                line-height: 44px;
+                border: 1px solid #e8e8e8;
+                -webkit-border-radius: 4px;
+                -moz-border-radius: 4px;
+                -o-border-radius: 4px;
+                border-radius: 4px;
+                position: absolute;
+                top: 0px;
+                right: 0px;
+                width: 110px;
+                text-align: center;
+                a {
+                    text-decoration: none;
+                    color: #999;
+                    cursor: pointer;
+                    padding: 0px 10px;
+                    display: block;
+                    font-size: 13px;
+                }
+            }
+            .err_tip1,.err_tip, .ap_err_tip1 {
+                
+                color: #ff6f3d;
+                margin-top: -12px;
+            }
+        }
+      
+        .err_tip1,.err_tip{
+            display: none;
+        }
+        #canvas{
+            float:left;
+            width: 156px;
+            border: 1px solid #ccc;
+            height: 30px;
+            margin-bottom: 10px;
+
+        }
+    }
+    #submit{
+        width:300px;
+        height:50px;
+        background: #E91206;
+        border-radius: 3px;
+        cursor: pointer;
+        border:1px solid #E91206;
     }
 }

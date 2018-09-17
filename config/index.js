@@ -43,6 +43,13 @@ const config = {
                 './src/View/register/css/common/*.scss'
             ],
             'register': './src/View/register/css/register/*.scss'
+        },
+        'login': {
+            'common': [
+                './src/Css/login.scss',
+                './src/View/login/css/common/*.scss'
+            ],
+            'login': './src/View/login/css/login/*.scss'
         }
     },
     jsoptions: {// js配置

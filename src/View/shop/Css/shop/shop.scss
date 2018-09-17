@@ -1,9 +1,13 @@
 a{
     text-decoration: none;
 }  
-body{background:#fff !important;}
+body,html{background:#fff !important;}
 li{list-style: none;} 
 .min{
+    background-image:url(../img/bg.png) ;
+    background-repeat: repeat-x;
+   
+    height:1000px;
     .center{
        
         width:1210px;
@@ -49,8 +53,8 @@ li{list-style: none;}
                         .mask{
                             top:0;
                             left:0;
-                            width:150px;
-                            height:150px;
+                            width:200px;
+                            height:200px;
                             background: #ccc;
                             opacity: 0.4;
                             display: none;
@@ -58,12 +62,19 @@ li{list-style: none;}
                         }
                     }
                     .big-img{
+                        display: none;
                         width:420px;
                         height: 420px;
+                        overflow: hidden;
                         position: absolute;
-                        border:1px solid red;
+                        border:1px solid #ccc;
                         top:0;
                         left:410px;
+                        img{
+                            width:1000px;
+                            height: 1000px;
+                            position: absolute;
+                        }
                     }
                   
                 }
