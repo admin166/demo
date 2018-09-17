@@ -6,6 +6,7 @@ const nav = require('./nav')
 
 nav()
 
+
 var ul = $(".all-hook ul li");
 ul.hover(function(){
     $(this).css({"background-color":"skyblue","opavity":0.7})
