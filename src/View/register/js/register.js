@@ -1,4 +1,4 @@
-$("#head").load("../public/public2.html",function(){
+
     $("#canvas").html(yzm())
     function yzm(){
         var str="";
@@ -25,8 +25,8 @@ $("#submit").click(function(){
        var user = $("input[name=user]").val();
        var pwd = $("input[name=password]").val();
       
-       $.cookie('user',user,{ expires: 7 })
-       $.cookie('pwd',pwd,{ expires: 7 })
+       $.cookie('user',user,{ expires: 7 ,path: '/'  })
+       $.cookie('pwd',pwd,{ expires: 7,path: '/' })
        
        alert("注册成功")
        $(window).attr('location','../login/login.html');
@@ -40,8 +40,9 @@ $("input[name=user]").focus(function(){
 var reg = /^\w{6,}$/;
 var flaguser = null;
 $("input[name=user]").blur(function(){
+    $("#authCodeError").html("") 
    var txt = $(this).val()
-   if( $(this).val() != '' ){
+  
      if( reg.test(txt) ){
          
           flaguser = true;
@@ -50,10 +51,7 @@ $("input[name=user]").blur(function(){
          $(".err_tip1").show()
          $("#authCodeError").html("格式不正确!")
      }
-   }else{
-    $(".err_tip1").show()
-    $("#authCodeError").html("账号不能为空!")
-   }
+  
 })
 
 //密码
@@ -61,7 +59,7 @@ $("input[name=user]").blur(function(){
 var flagpwd = null;
 var reg2 = /^\w{6,20}$/;
 $("input[name=password]").blur(function(){
-   if( $(this).val() != '' ){
+    $("#authCodeError").html("") 
     if( reg2.test($(this).val()) ){
          
         flagpwd = true;
@@ -70,11 +68,7 @@ $("input[name=password]").blur(function(){
        $(".err_tip").show()
        $("#authCodeError").html("格式不正确!")
    }
-   }else{
-      flagpwd = false;
-     $(".err_tip").show()
-     $("#authCodeError").html("密码不能为空!")
-   }
+   
 })
  
 
@@ -90,7 +84,7 @@ $("#change").click(function(){
     $("#canvas").html(yzm())
 })
 
-})
+
    
 
 //判断密码

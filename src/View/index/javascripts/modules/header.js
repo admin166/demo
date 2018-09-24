@@ -1,10 +1,13 @@
 //header中方nav
 
 // 引入nav
-
+$("img").lazyload({
+    threshold : 200,
+    effect : "fadeIn"
+});
 const nav = require('./nav')
 
-nav()
+
 
 var ul = $(".all-hook ul li");
 ul.hover(function(){
@@ -39,7 +42,11 @@ list.hover(function(){
     $(this).find("a").removeClass("active");
 })
 
-
+$(".b li").hover(function(){
+    $(this).find("a").addClass("active")
+},function(){
+    $(this).find("a").removeClass("active")
+})
 
 
 //滚轮
@@ -47,23 +54,33 @@ list.hover(function(){
 var divs = $(".boxs");
 
  
- var index = divs.filter(function(){
-    return  Math.abs($(this).offset().top - h) < $(this).height()/2;
-   
- })
+ 
  //console.log(index.index())
- if( h > 1270 ){
-    if( index.index() != -1 ){
-        $(".footer li").eq(index.index()).find("a").addClass("active2").end().siblings().find("a").removeClass("active2");
+ $(window).scroll(function(){
+    var h = $("body,html").scrollTop();
+    var index = divs.filter(function(){
+        return  Math.abs($(this).offset().top - h) < $(this).height()/2;
+       
+     })
+    if( h > 50 ){
+        $(".l2").show()
+    }else{
+       $(".l2").hide()
+    }  
+
+    if( h > 1270 ){
+        if( index.index() != -1 ){
+            $(".footer li").eq(index.index()).find("a").addClass("active2").end().siblings().find("a").removeClass("active2");
+         }
      }
- }
+        
+     if( h > 350 ){
+         $(".footer").show().css("opacity",0.5).stop().animate({"opacity":1},300);
+     }else{
+        $(".footer").hide().stop().animate({"opacity":0.5},600);
+     }
+})
  
- 
- if( h > 350 ){
-     $(".footer").show().css("opacity",0.5).stop().animate({"opacity":1},300);
- }else{
-    $(".footer").hide().stop().animate({"opacity":0.5},600);
- }
 
  $(".footer li").click(function(){
     

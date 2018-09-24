@@ -56,6 +56,11 @@
                         color: #666666;
                     }
                     form{
+                        #s1,#s2{
+                            display: block;
+                           margin-top:10px;
+                           color:#E91206;
+                        }
                         width:280px;
                         height: 303px;
                         .pwd,.user{
@@ -63,11 +68,13 @@
                             width: 270px;
                             height: 35px;
                             border: 1px solid #ccc;
+                          
                         }
                         .pwd{
                             margin-top:20px;
                         }
                         #btn{
+                            cursor: pointer;
                             width:270px;
                             height:35px;
                             background: #E91206;

@@ -1,0 +1,35 @@
+{
+    "shop_1":{
+        "title":"泰坤(TYCOON) TAJ-12 入门金贝鼓 手鼓 非洲鼓 泰国产12寸 整木羊皮",
+        "price":"1128.00",
+        "bimg":["img1.jpg","img2.jpg","img3.jpg"],
+        "simg":["imga.jpg","imgb.jpg","imgc.jpg"]
+    },
+
+    "shop_2":{
+        "title":"铂锐(Boray) BR-G215W 立式触摸屏(雷克版)KTV点歌系统必备",
+        "price":"1799.00",
+        "simg":["imgd.jpg","imge.jpg","imgf.jpg","imgg.jpg"],
+        "bimg":["img8.jpg","img9.jpg","img10.jpg","img11.jpg"]
+    },
+    "shop_3":{
+        "title":"雅马哈(YAMAHA)MG16XU16路带效果器模拟专业调音台",
+        "price":"2949.00",
+        "simg":["imgh.jpg","imgi.jpg","imgj.jpg","imgk.jpg"],
+        "bimg":["img12.jpg","img13.jpg","img14.jpg","img15.jpg"]
+        
+    },
+    "shop_4":{
+        "title":"罗兰(Roland)TD-11KV电子鼓可接耳机紧凑型习V-Drums儿童",
+        "price":"9168.00",
+        "simg":["imgl.jpg","imgm.jpg","imgn.jpg","imgo.jpg"],
+        "bimg":["img16.jpg","img17.jpg","img18.jpg","img19.jpg"]
+    },
+    "shop_5":{
+        "title":"罗兰(Roland)TD-11KV电子鼓可接耳机紧凑型习V-Drums儿童",
+        "price":"9168.00",
+        "simg":["imgh.jpg","imgi.jpg","imgj.jpg","imgk.jpg"],
+        "bimg":["img12.jpg","img13.jpg","img14.jpg","img15.jpg"]
+    }
+    
+}

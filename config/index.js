@@ -29,13 +29,18 @@ const config = {
                 './src/Css/resert.scss',
                 './src/View/order/*/*.scss'
             ]
+            , 'common': [
+                './src/Css/resert.scss',
+                './src/View/0rder/Css/common/*.scss'
+            ],
         },
         'shop': {
             'common': [
                 './src/Css/resert.scss',
                 './src/View/shop/Css/common/*.scss'
             ],
-            'shop': './src/View/shop/Css/shop/*.scss'
+            'shop': './src/View/shop/Css/shop/*.scss',
+            'shopcart':'./src/View/shop/Css/shopcart/*.scss'
         },
         'register': {
             'common': [
@@ -60,6 +65,7 @@ const config = {
         'order': './src/view/order/javascripts/list.js',
         'shop':{ //首页的入口
             shop: './src/view/shop/js/shop.js',
+            shopcart: './src/view/shop/js/shopcart.js'
            
         },
         'register':{ //首页的入口

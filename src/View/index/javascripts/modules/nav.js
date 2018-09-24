@@ -17,14 +17,26 @@ dis.stop().animate({"top":-35*a},1500)
   
 }
  var timer3 = setInterval(top,1500);
-
-
+$(".prev").click(function(){
+   a--
+   top()
+})
+$(".next").click(function(){
+ a ++
+ top()
+})
 
  $(".l2").click(function(){
    
     $("html,body").stop().animate({"scrollTop":0},1000);
 })
 
+$(".nav-fix ul li").hover(function(){
+   
+    $(this).find("a").addClass("active")
+},function(){
+    $(this).find("a").removeClass("active")
+})
 //我的信息
 
 //我的信息
@@ -97,8 +109,48 @@ $(".l2").click(function(){
     $("html,body").stop().animate({"scrollTop":0},1000);
 })
 
-const nav =  () => {
-  
-}
+//购物车
 
-module.exports = nav
+var goods = JSON.parse($.cookie("good"));
+//getnum(goods)
+if( goods.length ){
+    $(".cart-good-list").show();
+    $(".no-goods-list").hide()
+    var str = '<ul>'
+    goods.forEach(good => {
+        str += `
+            <li>
+                <div class="goods-image">
+                    <a href=""><img src="${good.img}" alt=""></a>
+                </div>
+                <div class="goods-details">
+                    <h3>${good.title}</h3>
+                    <p>${good.price}<a href=""><span>${good.num}x</span></a></p>
+                </div>
+            </li>
+        `
+    });
+    console.log(goods)
+    str  += '</ul>'
+     $(".cart-num").html(goods.length);
+     $(".cart-goods-amount").find("span").html(goods.length);
+     $(".cart-goods-total").find("span").html(getprice(goods));
+     $(".cart-good-list").prepend(str)
+}
+function getprice(item){
+    let sum = 0;
+ 
+    item.forEach( good =>{
+      return sum+=(good.price * good.num) *1;
+  })
+  return sum
+}
+// function getnum(item){
+//     let num = 0;
+//      item.forEach( index=>{
+//         return num+=(index.num) * 1;
+       
+//     } )
+//     return num
+// }
+console.log(getprice(goods))

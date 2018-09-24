@@ -77,7 +77,7 @@ gulp.task('handle:js', function () {
         let filename = Array.isArray(entry) || ((typeof entry) === 'string') ? page : '[name]'
         let stream = gulp.src('src/entry.js')
             .pipe(webpack({
-                mode: 'production',
+                mode: 'none',
                 entry: entry,
                 output: { filename: filename+'.min.js' },
                 module: {
